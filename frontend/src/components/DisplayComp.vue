@@ -7,11 +7,11 @@
             <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="https://i.postimg.cc/tT1ZhsRq/2b19380fb17fc54f7bf7f0019ca244d2.jpg" class="d-block w-100"
+                        <img src="https://i.postimg.cc/tTfRyDjy/4adb0adf17078468b612ea0e8d667798.jpg" class="d-block w-100"
                             alt="...">
                     </div>
                     <div class="carousel-item">
-                        <img src="https://i.postimg.cc/v8kDd8Y9/87cc3ff0c4254ae8e3fb898ea2683a7d.jpg" class="d-block w-100"
+                        <img src="https://i.postimg.cc/tTfRyDjy/4adb0adf17078468b612ea0e8d667798.jpg" class="d-block w-100"
                             alt="...">
                     </div>
                     <div class="carousel-item">
