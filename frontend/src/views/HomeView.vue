@@ -2,21 +2,27 @@
   <div class="home">
     <div class="row">
         <DisplayComp />
+    </div> 
+    <div class="row">
+      <CarouselComp/>
     </div>
     <div class="row" style="align-items: center; justify-content: center;">
       <JustDroppedComp/>
     </div>
+   
   </div>
 </template>
 
 <script>
 import DisplayComp from '@/components/DisplayComp.vue';
 import JustDroppedComp from '../components/JustDroppedComp.vue';
+import CarouselComp from '../components/CarouselComp.vue'
 export default {
   name: 'HomeView',
   components: {
     DisplayComp,
-    JustDroppedComp
+    JustDroppedComp,
+    CarouselComp
   }
 }
 </script>
