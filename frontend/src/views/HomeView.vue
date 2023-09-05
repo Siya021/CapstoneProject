@@ -1,12 +1,20 @@
 <template>
   <div class="home">
     <div class="row">
+      <div class="col">
+        <img src="https://i.postimg.cc/vTNvxcyh/IMG-20231904-Trendzone-Mag-Agency.jpg" alt="" class="image">
+      </div>
+    </div><hr>
+    <div class="row">
         <DisplayComp />
     </div> 
-    <div class="row">
+    <hr>
+    <div class="row" style="background-color: white;">
       <CarouselComp/>
     </div>
-    <div class="row" style="align-items: center; justify-content: center;">
+    <hr>
+    <div class="row" style="align-items: center; justify-content: center;background-color: black;border-top: 5px solid;">
+      <h2>Just Dropped</h2>
       <JustDroppedComp/>
     </div>
    
@@ -28,12 +36,15 @@ export default {
 </script>
 <style scoped>
 .home {
-  background-image: url('https://i.postimg.cc/vTNvxcyh/IMG-20231904-Trendzone-Mag-Agency.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-color: black;
   height: 1200px;
+  color:white ;
 }
-
+.image{
+  width: 100%;
+  height: 500px;
+  object-fit: contain;
+}
 .row {
   align-content: center;
   justify-content: center;

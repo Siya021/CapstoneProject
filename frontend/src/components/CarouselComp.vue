@@ -1,9 +1,6 @@
 <template>
     <div class="row">
-        <div class="col">
-            <h1>Coming soon</h1>
-        </div>
-        <div class="col">
+        <div class="col-6">
             <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
@@ -54,6 +51,9 @@
                 </div>
             </div>
         </div>
+        <div class="col-6" style="padding:50px; text-align:center; background-color: black;">
+            <h1>Coming soon</h1>
+        </div>
     </div>
 </template>
 
@@ -63,4 +63,13 @@ export default {
 }
 </script>
 
-<style scoped></style>
+<style scoped>
+.carousel-item{
+    height: 500px;
+    width: 550px;
+}
+h1{
+    color: red;
+    font-size: 45px;
+}
+</style>

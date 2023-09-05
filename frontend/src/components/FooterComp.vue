@@ -4,25 +4,11 @@
     ">
             <div class="row">
                 <div class="col-4 border-left">
-                    <h1>SNEAKER<span>SYNC</span></h1>
-                    <p>Step In Sync, Stride In Style</p>
+                    
                     <hr>
                     <h5>Follow Us</h5>
                     <div class="social-container">
-                        <ul class="nav justify-content-end">
-                            <li class="nav-item">
-                                <a class="nav-link active" href=""><i class="bi bi-facebook"></i></a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href=""><i class="bi bi-twitter"></i></a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#"><i class="bi bi-instagram"></i></a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#"><i class="bi bi-envelope-at"></i></a>
-                            </li>
-                        </ul>
+                        
                     </div>
                 </div>
                 <div class="col-4">
@@ -37,7 +23,7 @@
                 </div>
                 <div class="col-4">
                     <div class="container-fluid">
-                        <MapComp />
+    
                     </div>
                 </div>
                 <hr>
@@ -73,6 +59,7 @@ footer {
     position: relative;
     align-content: center;
     justify-content: center;
+    margin-top: 800px;
 }
 
 .bi {

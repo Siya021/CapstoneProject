@@ -5,8 +5,8 @@
                 <div class="card" style="width: 18rem;">
                     <img src="https://i.postimg.cc/LXpSsvsD/Nike-Uptempo-Black-Blue-Sneaker-removebg-preview.png" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                            card's content.</p>
+                        <p class="card-text">Brand</p>
+                        <a href="/singleview" class="btn">More Details</a>
                     </div>
                 </div>
             </div>
