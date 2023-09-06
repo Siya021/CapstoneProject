@@ -1,59 +1,235 @@
 <template>
     <div class="row">
-        <div class="col-4">
-            <h1>Your Pathway to <span>Comfort</span> & <span>Style</span></h1>
-        </div>
+        <div class="col-4 " style="padding-top: 20px;" >
+            <h1 class="animate__animated animate__backInRight">Your Pathway to <span >Comfort</span> & <span>Style</span></h1>
+        </div> 
         <div class="col-4">
             <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="https://i.postimg.cc/LXpSsvsD/Nike-Uptempo-Black-Blue-Sneaker-removebg-preview.png" class="d-block w-100" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="https://i.postimg.cc/pTZRrSKD/79218566-800-800.png" class="d-block w-100" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="https://i.postimg.cc/mryGpMcV/79197525-800-800.png" class="d-block w-100" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="https://i.postimg.cc/J0pr6Fn1/79154791-800-800.png" class="d-block w-100" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="https://i.postimg.cc/dtSQGgp6/79123668-800-800.png" class="d-block w-100" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="https://i.postimg.cc/dtSQGgp6/79123668-800-800.png" class="d-block w-100" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="https://i.postimg.cc/wv6YCkn3/79111859-800-800.png" class="d-block w-100" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="https://i.postimg.cc/q7SZLvwQ/79104240-800-800.png" class="d-block w-100" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="https://i.postimg.cc/9Q3K3p7V/79063633-800-800.png" class="d-block w-100" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="https://i.postimg.cc/HLryQQ6c/79061302-800-800.png" class="d-block w-100" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="https://i.postimg.cc/SNYRTTmr/79036939-800-800.png" class="d-block w-100" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="https://i.postimg.cc/8Pyct7Jh/79038625-800-800.png" class="d-block w-100"
+                    <div class="carousel-item active animate__animated animate__lightSpeedInRight">
+                        <img src="https://i.postimg.cc/9QSNj5JP/79292363-800-800-removebg-preview.png" class="d-block w-100"
                             alt="...">
                     </div>
                     <div class="carousel-item">
-                        <img src="https://i.postimg.cc/tTfRyDjy/4adb0adf17078468b612ea0e8d667798.jpg" class="d-block w-100"
+                        <img src="https://i.postimg.cc/63VHR7wz/79277671-800-800-removebg-preview_(1).png"
+                            class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://i.postimg.cc/SR7wyTJS/79266783-800-800-removebg-preview.png" class="d-block w-100"
                             alt="...">
                     </div>
                     <div class="carousel-item">
-                        <img src="https://i.postimg.cc/tTfRyDjy/4adb0adf17078468b612ea0e8d667798.jpg" class="d-block w-100"
+                        <img src="https://i.postimg.cc/zvZrDH7j/79265071-800-800-removebg-preview.png" class="d-block w-100"
                             alt="...">
                     </div>
                     <div class="carousel-item">
-                        <img src="https://i.postimg.cc/tTfRyDjy/4adb0adf17078468b612ea0e8d667798.jpg" class="d-block w-100"
+                        <img src="https://i.postimg.cc/nhctLJ46/79262059-800-800-removebg-preview.png" class="d-block w-100"
                             alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://i.postimg.cc/fWK2R08R/79227396-800-800-removebg-preview.png" class="d-block w-100"
+                            alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://i.postimg.cc/FHfDpCNY/79161892-800-800-removebg-preview.png" class="d-block w-100"
+                            alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://i.postimg.cc/q73DJb5P/79157379-800-800-removebg-preview.png" class="d-block w-100"
+                            alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://i.postimg.cc/281QNqJJ/79152501-800-800-removebg-preview.png" class="d-block w-100"
+                            alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://i.postimg.cc/yNHcRLd4/79127338-800-800-1-removebg-preview.png"
+                            class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://i.postimg.cc/gJ7CSX1p/79077169-800-800-removebg-preview.png" class="d-block w-100"
+                            alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://i.postimg.cc/YCmzY4zg/79039777-800-800-removebg-preview.png" class="d-block w-100"
+                            alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://i.postimg.cc/yYKHw9k6/78998054-800-800-removebg-preview.png" class="d-block w-100"
+                            alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://i.postimg.cc/jj1T9FJB/78986478-800-800-removebg-preview.png" class="d-block w-100"
+                            alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://i.postimg.cc/3xwPTZ7h/78976979-800-800-removebg-preview.png" class="d-block w-100"
+                            alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://i.postimg.cc/PfgxNPJ0/78974514-800-800-removebg-preview.png" class="d-block w-100"
+                            alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://i.postimg.cc/V65yWBG4/78947663-800-800-removebg-preview.png" class="d-block w-100"
+                            alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://i.postimg.cc/VvnzXWvp/78937592-800-800-removebg-preview.png" class="d-block w-100"
+                            alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://i.postimg.cc/7P04sXPQ/78913273-800-800-removebg-preview.png" class="d-block w-100"
+                            alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://i.postimg.cc/Wp6Kqy1j/78860688-800-800-removebg-preview.png" class="d-block w-100"
+                            alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://i.postimg.cc/c4FbX83b/78794156-800-800-removebg-preview.png" class="d-block w-100"
+                            alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://i.postimg.cc/XNfMcJxR/78746524-800-800-removebg-preview.png" class="d-block w-100"
+                            alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://i.postimg.cc/X7LTmzRx/78738432-800-800-removebg-preview.png" class="d-block w-100"
+                            alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://i.postimg.cc/jdtp8bFL/78733663-800-800-removebg-preview.png" class="d-block w-100"
+                            alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://i.postimg.cc/9z5vV3WN/78731356-800-800-removebg-preview.png" class="d-block w-100"
+                            alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://i.postimg.cc/NfnxK8mB/78719643-800-800-removebg-preview.png" class="d-block w-100"
+                            alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://i.postimg.cc/MTJPv0kv/78652453-800-800-removebg-preview.png" class="d-block w-100"
+                            alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://i.postimg.cc/90djDXNj/78648250-800-800-removebg-preview.png" class="d-block w-100"
+                            alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://i.postimg.cc/d3HjmrfR/78640682-800-800-removebg-preview.png" class="d-block w-100"
+                            alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://i.postimg.cc/J0B997Wk/74421003-800-800-removebg-preview.png" class="d-block w-100"
+                            alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://i.postimg.cc/SRpBbFQ1/74408438-800-800-removebg-preview.png" class="d-block w-100"
+                            alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://i.postimg.cc/CLCF17Wf/74139662-800-800-removebg-preview.png" class="d-block w-100"
+                            alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://i.postimg.cc/B6CgbdcV/74084090-800-800-removebg-preview.png" class="d-block w-100"
+                            alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://i.postimg.cc/YSD27STn/74017355-800-800-removebg-preview.png" class="d-block w-100"
+                            alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://i.postimg.cc/C5L4qmcL/73871909-800-800-removebg-preview.png" class="d-block w-100"
+                            alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://i.postimg.cc/ht3NP7Pd/73639595-800-800-removebg-preview.png" class="d-block w-100"
+                            alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://i.postimg.cc/zXvjD2Lx/72955093-800-800-removebg-preview.png" class="d-block w-100"
+                            alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://i.postimg.cc/fTQzDpgN/72706962-800-800-removebg-preview.png" class="d-block w-100"
+                            alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://i.postimg.cc/tCzjyTx3/72642898-800-800-removebg-preview.png" class="d-block w-100"
+                            alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://i.postimg.cc/BZLbqxSx/72629325-800-800-removebg-preview.png" class="d-block w-100"
+                            alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://i.postimg.cc/7ZDZMdgV/72597392-800-800-removebg-preview.png" class="d-block w-100"
+                            alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://i.postimg.cc/ZK6qN4yn/72543562-800-800-removebg-preview.png" class="d-block w-100"
+                            alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://i.postimg.cc/63ZkP5KG/72534980-800-800-removebg-preview.png" class="d-block w-100"
+                            alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://i.postimg.cc/SsQ9TjCg/72527093-800-800-removebg-preview.png" class="d-block w-100"
+                            alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://i.postimg.cc/43x4jc2H/72515159-800-800-removebg-preview.png" class="d-block w-100"
+                            alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://i.postimg.cc/JnyrzLL1/72505848-800-800-removebg-preview.png" class="d-block w-100"
+                            alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://i.postimg.cc/QNTNLhmm/72433401-800-800-removebg-preview.png" class="d-block w-100"
+                            alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://i.postimg.cc/fL5ChNg5/79229062-800-800-removebg-preview.png" class="d-block w-100"
+                            alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://i.postimg.cc/fbnBc597/79063566-800-800-removebg-preview.png" class="d-block w-100"
+                            alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://i.postimg.cc/d31BsxbF/79040247-800-800-removebg-preview.png" class="d-block w-100"
+                            alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://i.postimg.cc/FKyGDcyM/78931972-800-800-removebg-preview.png" class="d-block w-100"
+                            alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://i.postimg.cc/yY2PKnvq/78729336-800-800-removebg-preview.png" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://i.postimg.cc/yY2PKnvq/78729336-800-800-removebg-preview.png" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://i.postimg.cc/XvbkGJRQ/78628035-800-800-removebg-preview.png" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://i.postimg.cc/vBGhjBXc/73631212-800-800-removebg-preview.png" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://i.postimg.cc/P58Sv0Pr/72450789-800-800-removebg-preview.png" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://i.postimg.cc/6qmhyhKv/63381126-800-800-removebg-preview.png" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://i.postimg.cc/66jcjBZp/70813141-800-800-removebg-preview.png" class="d-block w-100" alt="...">
                     </div>
                 </div>
             </div>
@@ -77,8 +253,7 @@ h1 {
 }
 
 .col-4 h1 {
-    border-left: 15px solid white;
-    border-top-left-radius: 20%;
+
     word-wrap: break-word;
     font-size: 60px;
     font-weight: 700;
@@ -91,5 +266,4 @@ span {
     font-style: italic;
     font-weight: 700;
     line-height: normal;
-}
-</style>
+}</style>

@@ -59,7 +59,7 @@ footer {
     position: relative;
     align-content: center;
     justify-content: center;
-    margin-top: 800px;
+    margin-top: 500px;
 }
 
 .bi {
