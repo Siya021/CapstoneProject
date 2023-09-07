@@ -1,14 +1,10 @@
-const db = require('../config')
-const { hash, compare, hashSync } = require('bcrypt')
-const { createToken } = require('../middleware/AuthenticateUser')
-
-class Users {
-  fetchUsers(req, res) {
+class Products {
+  fetchProducts(req, res) {
     const query = `
-        SELECT userID, firstName, lastName, email, userUrl
-        FROM Users;`;
+        SELECT prodID, brand, prodName, price, productUrl
+        FROM Products;`;
     db.query(query, (err, results) => {
-      if (err) throw err
+      if (err) throw err;
       res.json({
         status: res.statusCode,
         results,
@@ -16,13 +12,13 @@ class Users {
     });
   }
   // ==== SINGLE USER ==== \\
-  fetchUser(req, res) {
-    const query = ` SELECT userID, firstName,
-        lastName, email, userUrl
+  fetchProduct(req, res) {
+    const query = ` SELECT prodID, brand,
+        prodName, price, productUrl
         FROM Users
         WHERE UserID = ${req.params.id};`;
     db.query(query, (err, result) => {
-      if (err) throw err
+      if (err) throw err;
       res.json({
         status: res.statusCode,
         result,
@@ -43,7 +39,7 @@ class Users {
     `;
 
     db.query(query, [email], async (err, result) => {
-      if (err) throw err
+      if (err) throw err;
       if (!result?.length) {
         res.json({
           status: res.statusCode,
@@ -90,7 +86,7 @@ class Users {
     };
     //Query
     const query = `
-   INSERT INTO Users
+   INSERT INTO Products
    SET ?;
    `;
     db.query(query, [data], (err) => {
@@ -103,17 +99,17 @@ class Users {
       });
       res.json({
         status: res.statusCode,
-        msg: "You are now registered",
+        msg: "You've updated your products",
       });
     });
   }
   // ==== UPDATE ==== \\
-  updateUser(req, res) {
+  updateProducts(req, res) {
     const query = `
-        UPDATE FROM Users
+        UPDATE FROM Products
         SET ?
-        WHERE userID = ?
-        ;`
+        WHERE prodID = ?
+        ;`;
     db.query(query, [req.body, req.params.id], (err) => {
       if (err) throw err;
       res.json({
@@ -123,11 +119,11 @@ class Users {
     });
   }
   //===== DELETE ====== \\
-  deleteUser(req, res) {
+  deleteproduct(req, res) {
     const query = `
-        DELETE FROM Users
-        WHERE userID = ${req.params.id};
-        `
+        DELETE FROM Products
+        WHERE prodID = ${req.params.id};
+        `;
     db.query(query, (err) => {
       if (err) throw err;
       res.json({
@@ -137,4 +133,4 @@ class Users {
     });
   }
 }
-module.exports = Users
+module.exports = Products;
