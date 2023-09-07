@@ -11,13 +11,10 @@
 </script>
 
 <style scoped>
-p{
-    border: 1px solid white;
-}
-
 .logo{
-    color: black;
+    color: white;
     font-style: italic;
+    font-weight: 800;
 }
 span{
     color: red;

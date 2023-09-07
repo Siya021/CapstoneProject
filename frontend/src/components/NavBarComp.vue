@@ -6,14 +6,14 @@
           <a class="nav-link active" aria-current="page" href="/admin">Active</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
+          <a class="nav-link" href="/login">Link</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Link</a>
         </li>
       </ul>
     </div>
-    <nav class="navbar navbar-expand-lg bg-body-dark">
+    <nav class="navbar navbar-expand-lg bg-body-dark" style="background-color: black; color: white">
       <div class="container-fluid">
         <a class="navbar-brand" href="/"><LogoComp/></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -21,9 +21,9 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mb-2 mb-lg-0">
+          <ul class="navbar-nav mb-2 mb-lg-0" style="color: white">
             <li class="nav-item">
-              <router-link class="nav-link active" aria-current="page" to="/">Home</router-link>
+              <router-link class="nav-link active" aria-current="page" to="/" style="color: white">Home</router-link>
             </li>
             <li>
               <router-link class="nav-link" to="/about">About</router-link>
@@ -60,6 +60,9 @@ export default {
 }
 </script>
 <style scoped>
+.nav-link{
+  color: white;
+}
 .top a{
   color: white;
 }

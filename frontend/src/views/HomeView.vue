@@ -6,11 +6,7 @@
     <div class="row" style="background-color: white;">
       <CarouselComp/>
     </div>
-    <div class="row" style="align-items: center; justify-content: center;background-color: black;border-top: 5px solid;">
-      <h2>Just Dropped</h2>
-      <JustDroppedComp/>
-    </div>
-   
+    <hr>
   </div>
 </template>
 
@@ -31,7 +27,6 @@ export default {
 <style scoped>
 .home {
   background-color: black;
-  height: 1200px;
   color:white ;
 }
 .row {

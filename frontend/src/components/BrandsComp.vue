@@ -6,16 +6,31 @@
                     <h1>Adidas</h1>
                 </div>
                 <div class="carousel-item">
+                    <img src="https://i.postimg.cc/LXpSsvsD/Nike-Uptempo-Black-Blue-Sneaker-removebg-preview.png" class="d-block w-100" alt="..." style="height: 250px;">
+                </div>
+                <div class="carousel-item">
                     <h1>Converse</h1>
+                </div>
+                <div class="carousel-item">
+                    <img src="" class="d-block w-100" alt="..." style="height: 250px;">
                 </div>
                 <div class="carousel-item">
                     <h1>Nike</h1>
                 </div>
                 <div class="carousel-item">
+                    <img src="" class="d-block w-100" alt="..." style="height: 250px;">
+                </div>
+                <div class="carousel-item">
                     <h1>New Balance</h1>
                 </div>
                 <div class="carousel-item">
+                    <img src="" class="d-block w-100" alt="..." style="height: 250px;">
+                </div>
+                <div class="carousel-item">
                     <h1>Puma</h1>
+                </div>
+                <div class="carousel-item">
+                    <img src="" class="d-block w-100" alt="..." style="height: 250px;">
                 </div>
             </div>
         </div>
@@ -29,13 +44,12 @@ export default {
 </script>
 
 <style scoped>
-h1{
+h1 {
     font-size: 60px;
     font-weight: 700;
 }
 
-.col-6{
+.col-6 {
     margin-left: 8rem;
-    margin-top: 6rem;
 }
 </style>

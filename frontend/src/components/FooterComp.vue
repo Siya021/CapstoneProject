@@ -4,7 +4,7 @@
     ">
             <div class="row">
                 <div class="col-4 border-left">
-                    
+                    <LogoComp/>
                     <hr>
                     <h5>Follow Us</h5>
                     <div class="social-container">
@@ -36,17 +36,15 @@
 </template>
 
 <script>
+import LogoComp from './LogoComp.vue';
 export default {
-
+    components: {
+    LogoComp
+}
 }
 </script>
 
 <style scoped>
-i{
-    color:white;
-    font-size: large;
-
-}
 
 .social-container {
     display: flex;
@@ -54,12 +52,11 @@ i{
 }
 
 footer {
-    background-color:blue;
+    background-color:rgb(0, 0, 0);
     color: white;
     position: relative;
     align-content: center;
     justify-content: center;
-    margin-top: 500px;
 }
 
 .bi {
