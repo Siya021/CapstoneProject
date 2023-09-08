@@ -44,7 +44,7 @@
     <div class="bottom">
       <ul class="nav justify-content-center">
         <li class="nav-item">
-          <p><a href="#" class="link-underline-danger">Don't have and account?sign up</a></p>
+          <p><a href="/signUp" class="link-underline-danger">Don't have and account?sign up</a></p>
         </li>
       </ul>
     </div>
@@ -70,7 +70,6 @@ export default {
   color: white;
   background-color: black;
 }
-
 .container-fluid {
   color: white;
 }

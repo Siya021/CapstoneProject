@@ -6,7 +6,8 @@
                 <FormComp />
             </div>
             <div class="col-6">
-                <img src="https://i.postimg.cc/vTNvxcyh/IMG_20231904_TrendzoneMagAgency.jpg" alt="" style="height:370px;width:370px">
+                <img src="https://i.postimg.cc/vTNvxcyh/IMG_20231904_TrendzoneMagAgency.jpg" alt="" style="height:370px;width:370px; ">
+                <p><small>@siyamthandamazokwana 2020</small></p>
             </div>
         </div>
     </div>
@@ -25,4 +26,13 @@ export default {
 
 
 <style scoped>
+img {
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  width: 150px;
+}
+p{
+    color: white;
+}
 </style>
