@@ -47,6 +47,25 @@ routes.delete("/products/:id", (req, res) => {
 });
 
 //order router
+routes.get("/orders", (req, res) => {
+  orders.fetchOrders(req, res);
+});
+
+routes.get("/orders/:id", (req, res) => {
+  orders.fetchOrder(req, res);
+});
+
+routes.post("/orders/register", bodyParser.json(), (req, res) => {
+  orders.registerOrder(req, res);
+});
+
+routes.put("/orders/:id", bodyParser.json(), (req, res) => {
+  orders.updateOrders(req, res);
+});
+
+routes.delete("/orders/:id", (req, res) => {
+  orders.deleteOrder(req, res);
+});
 
 module.exports = {
   express,
