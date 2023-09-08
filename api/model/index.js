@@ -5,6 +5,6 @@ const Products = require("./Products");
 //Export all objects
 module.exports = {
   users: new Users(),
-  Products: new Products(),
+  products: new Products(),
   orders: new Orders(),
 };

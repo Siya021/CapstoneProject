@@ -1,136 +1,120 @@
+const db = require("../config");
+
 class Products {
   fetchProducts(req, res) {
     const query = `
-        SELECT prodID, brand, prodName, price, productUrl
-        FROM Products;`;
+      SELECT prodID, brand, prodName, price, productUrl
+      FROM Products;`;
     db.query(query, (err, results) => {
-      if (err) throw err;
-      res.json({
-        status: res.statusCode,
-        results,
-      });
-    });
-  }
-  // ==== SINGLE USER ==== \\
-  fetchProduct(req, res) {
-    const query = ` SELECT prodID, brand,
-        prodName, price, productUrl
-        FROM Users
-        WHERE UserID = ${req.params.id};`;
-    db.query(query, (err, result) => {
-      if (err) throw err;
-      res.json({
-        status: res.statusCode,
-        result,
-      });
-    });
-  }
-  // ==== LOGIN ==== \\
-  login(req, res) {
-    const { email, userPass } = req.body;
-
-    // query with parameterized query
-    const query = `
-    SELECT firstName, lastName,
-    emailAdd, userPass,
-    userUrl
-    FROM Users
-    WHERE email= ?;
-    `;
-
-    db.query(query, [email], async (err, result) => {
-      if (err) throw err;
-      if (!result?.length) {
-        res.json({
-          status: res.statusCode,
-          msg: "You provided a wrong email.",
+      if (err) {
+        console.error(err);
+        res.status(500).json({
+          status: 500,
+          error: "Internal Server Error",
         });
       } else {
-        await compare(userPass, result[0].userPass, (cErr, cResult) => {
-          if (cErr) throw cErr;
-          // Create a token
-          const token = createToken({
-            email,
-            userPass,
-          });
-          // Save a token
-          res.cookie("LegitUser", token, {
-            maxAge: 3600000,
-            httpOnly: true,
-          });
-          if (cResult) {
-            res.json({
-              msg: "Logged in",
-              token,
-              result: result[0],
-            });
-          } else {
-            res.json({
-              status: res.statusCode,
-              msg: "Invalid password or you have not registered",
-            });
-          }
+        res.json({
+          status: res.statusCode,
+          results,
         });
       }
     });
   }
-  // ==== REGISTER ==== \\
-  async register(req, res) {
+
+  fetchProduct(req, res) {
+    const prodID= req.params.id;
+    const query = `
+      SELECT prodID, brand, prodName, price, productUrl
+      FROM Products
+      WHERE prodID = ?;`;
+    db.query(query, [prodID], (err, result) => {
+      if (err) {
+        console.error(err);
+        res.status(500).json({
+          status: 500,
+          error: "Internal Server Error",
+        });
+      } else if (result.length === 0) {
+        res.status(404).json({
+          status: 404,
+          error: "Product not found",
+        });
+      } else {
+        res.json({
+          status: res.statusCode,
+          result: result[0],
+        });
+      }
+    });
+  }
+
+  addProduct(req, res) {
     const data = req.body;
-    //Encrypt Password
-    data.userPass = await hash(data.userPass, 15);
-    // PayLoad
-    const user = {
-      email: data.email,
-      userPass: data.userPass,
-    };
-    //Query
     const query = `
-   INSERT INTO Products
-   SET ?;
-   `;
-    db.query(query, [data], (err) => {
-      if (err) throw err;
-      //Create Token
-      let token = createToken(user);
-      res.cookie("LegitUser", token, {
-        maxAge: 3600000,
-        httpOnly: true,
-      });
-      res.json({
-        status: res.statusCode,
-        msg: "You've updated your products",
-      });
+      INSERT INTO Products (brand, prodName, price, productUrl)
+      VALUES (?, ?, ?, ?);`;
+
+    db.query(query, [data.brand, data.prodName, data.price, data.productUrl], (err) => {
+      if (err) {
+        console.error(err);
+        res.status(500).json({
+          status: 500,
+          error: "Internal Server Error",
+        });
+      } else {
+        res.json({
+          status: res.statusCode,
+          msg: "Product added successfully",
+        });
+      }
     });
   }
-  // ==== UPDATE ==== \\
-  updateProducts(req, res) {
+
+  updateProduct(req, res) {
+    const prodID = req.params.id;
+    const updatedData = req.body;
     const query = `
-        UPDATE FROM Products
-        SET ?
-        WHERE prodID = ?
-        ;`;
-    db.query(query, [req.body, req.params.id], (err) => {
-      if (err) throw err;
-      res.json({
-        status: res.statusCode,
-        msg: "The user record was updated.",
-      });
+      UPDATE Products
+      SET ?
+      WHERE prodID = ?;`;
+
+    db.query(query, [updatedData, prodID], (err) => {
+      if (err) {
+        console.error(err);
+        res.status(500).json({
+          status: 500,
+          error: "Internal Server Error",
+        });
+      } else {
+        res.json({
+          status: res.statusCode,
+          msg: "Product updated successfully",
+        });
+      }
     });
   }
-  //===== DELETE ====== \\
-  deleteproduct(req, res) {
+
+  deleteProduct(req, res) {
+    const prodID = req.params.id;
     const query = `
-        DELETE FROM Products
-        WHERE prodID = ${req.params.id};
-        `;
-    db.query(query, (err) => {
-      if (err) throw err;
-      res.json({
-        status: res.statusCode,
-        msg: "A user record was deleted.",
-      });
+      DELETE FROM Products
+      WHERE prodID = ?;`;
+
+    db.query(query, [prodID], (err) => {
+      if (err) {
+        console.error(err);
+        res.status(500).json({
+          status: 500,
+          error: "Internal Server Error",
+        });
+      } else {
+        res.json({
+          status: res.statusCode,
+          msg: "Product deleted successfully",
+        });
+      }
     });
   }
 }
+
 module.exports = Products;
