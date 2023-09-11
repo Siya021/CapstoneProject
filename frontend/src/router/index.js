@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
+import CartView from '../views/CartView.vue'
 
 const routes = [
   {
@@ -41,14 +42,15 @@ const routes = [
     path: "/login",
     name: "login",
     component: () =>
-      import(/* webpackChunkName: "login"*/ "../components/LoginComp.vue")
+      import(/* webpackChunkName: "login"*/ "../views/LoginView.vue")
   },
   {
-    path: "/signUp",
-    name: "signUp",
+    path: "/register",
+    name: "register",
     component: () =>
-      import("../components/SignUp.vue")
+      import("../views/RegisterView.vue")
   }
+
 ];
 
 const router = createRouter({

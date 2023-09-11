@@ -52,6 +52,7 @@ export default {
 }
 
 footer {
+    border-top: 2px red solid;
     background-color:rgb(0, 0, 0);
     color: white;
     position: relative;

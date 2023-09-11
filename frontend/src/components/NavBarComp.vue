@@ -3,13 +3,13 @@
     <div class="top">
       <ul class="nav justify-content-end">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/admin">Active</a>
+          <a class="nav-link active" aria-current="page" href="/admin">Admin</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/login">Link</a>
+          <a class="nav-link" href="/login">Login</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
+          <a class="nav-link" href="/register">Register</a>
         </li>
       </ul>
     </div>
@@ -41,13 +41,6 @@
         </div>
       </div>
     </nav>
-    <div class="bottom">
-      <ul class="nav justify-content-center">
-        <li class="nav-item">
-          <p><a href="/signUp" class="link-underline-danger">Don't have and account?sign up</a></p>
-        </li>
-      </ul>
-    </div>
   </div>
 </template>
 

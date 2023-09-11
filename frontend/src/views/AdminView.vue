@@ -2,12 +2,13 @@
     <div>
         <div class="container">
             <h1>Admin</h1>
+            
         </div>
         <!-- Button trigger modal -->
-        <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal">
-            ADD NEW SNEAKER
+        <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          ADD
         </button>
-        <button class="btn btn-outline-warning">SORT</button>
+       
 
         <!-- Modal -->
         <div class="modal fade" style="font-family: 'Courier New', Courier, monospace; font-weight: 700;" id="exampleModal"
@@ -54,11 +55,17 @@
             <tbody>
         </tbody>
     </table>
-</div></template>
+
+</div>
+
+</template>
 
 <script>
+import AddProducts from '@/components/AddProducts.vue';
     export default {
-        
+    components: {
+            AddProducts
+        }
     }
 </script>
 
