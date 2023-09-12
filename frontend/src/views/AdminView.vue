@@ -1,130 +1,284 @@
 <template>
     <div class="admin">
-        <div class="container">
-            <h4>Users</h4>
-            <div class="card" style="width: 18rem;" v-for="User in Users" :key="User.userID">
-                <img :src="User.userUrl" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">{{ User.firstName }} {{ User.lastName }}</h5>
-                    <p class="card-text">{{ User.email }}</p>
-                </div>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">{{ User.userPass }}</li>
-                    <li class="list-group-item">A second item</li>
-                    <li class="list-group-item">A third item</li>
-                </ul>
-                <div class="card-body">
-                    <a href="#" class="editcard-link"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26"
-                            fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
-                            <path
-                                d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
-                            <path fill-rule="evenodd"
-                                d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z" />
-                        </svg></a>
-                    <a href="#" class="delcard-link"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26"
-                            fill="currentColor" class="bi bi-x-circle-fill" viewBox="0 0 16 16">
-                            <path
-                                d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z" />
-                        </svg></a>
-                </div>
-            </div>
+        <!-- Users Table -->
+        <div>
+            <form>
+                <h2>Add User</h2>
+                <input v-model="newUser.firstName" placeholder="firstName" />
+                <input v-model="newUser.lastName" placeholder="lastName" />
+                <input v-model="newUser.userAge" placeholder="userAge" />
+                <input v-model="newUser.Gender" placeholder="Gender" />
+                <input v-model="newUser.userRole" placeholder="userRole" />
+                <input v-model="newUser.emailAdd" placeholder="emailAdd" />
+                <input v-model="newUser.userPass" placeholder="userPass" />
+                <input v-model="newUser.userProfile" placeholder="userProfile" />
+                <button type="submit">
+                    add user
+                </button>
+            </form>
         </div>
-        <!-- Button trigger modal -->
-        <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
-            ADD
-        </button>
-
-
-        <!-- Modal -->
-        <div class="modal fade" style="font-family: 'Courier New', Courier, monospace; font-weight: 700;" id="exampleModal"
-            tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content bg-warning">
-                    <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="exampleModalLabel">New Sneaker</h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <form id="create-animal">
-                            #<br>
-                            <input type="text" name="name"><br>
-                            Title<br>
-                            <input type="text" name="title"><br>
-                            Brand:<br>
-                            <input type="text" name="brand"><br>
-                            Price:<br>
-                            <input type="number" name="price" min="700.00" max="15000.00" step="0.01"><br>
-                            Image:<br>
-                            <input type="text" name="image"><br>
-                            <input type="submit" name="submit" id="submit-new">
-                        </form>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-outline-dark">Save changes</button>
-                    </div>
-                </div>
-            </div>
+        <table class="w-100">
+            <thead>
+                <tr>
+                    <th>Firstname</th>
+                    <th>Lastname</th>
+                    <th>Age</th>
+                    <th>Gender</th>
+                    <th>Role</th>
+                    <th>Email</th>
+                    <th>Profile</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr v-for="user in users" :key="user.userID">
+                    <td>{{ user.firstName }}</td>
+                    <td>{{ user.lastName }}</td>
+                    <td>{{ user.userAge }}</td>
+                    <td>{{ user.Gender }}</td>
+                    <td>{{ user.userRole }}</td>
+                    <td>{{ user.emailAdd }}</td>
+                    <td>
+                        <div class="card bg-transparent">
+                            <img :src="user.userprofile" class="mx-auto" alt="...">
+                        </div>
+                    </td>
+                    <td>
+                        <button>edit</button>
+                        <button @click="deleteUser(user.userID)">delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <!-- Products Table -->
+        <div>
+            <h2>Add Product</h2>
+            <input v-model="newProduct.prodName" placeholder="Product Name" />
+            <input v-model="newProduct.Category" placeholder="Brand" />
+            <input v-model="newProduct.amount" placeholder="Price" type="number" step="0.01" />
+            <input v-model="newProduct.prodUrl" placeholder="Product URL" />
+            <button @click="addProduct" onclick="window.location.reload()">Add Product</button>
         </div>
         <table class="table">
             <thead>
                 <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Image</th>
-                    <th scope="col">Title</th>
-                    <th scope="col">Brand</th>
-                    <th scope="col">Price</th>
-                    <th scope="col">Actions</th>
+                    <th>ID</th>
+                    <th>Product Name</th>
+                    <th>Brand</th>
+                    <th>Price</th>
+                    <th>Product URL</th>
+                    <th>Actions</th>
                 </tr>
             </thead>
             <tbody>
+                <tr v-for="Product in Products" :key="Product.prodID">
+                    <td>{{ Product.prodID }}</td>
+                    <td>{{ Product.prodName }}</td>
+                    <td>{{ Product.Brand }}</td>
+                    <td>{{ Product.price }}</td>
+                    <td><img :src="Product.prodUrl" alt=""></td>
+                    <td>
+                        <button @click="editProduct(Product)">Edit</button>
+                        <button @click="deleteProduct(Product.prodID)" onclick="window.location.reload()">Delete</button>
+                    </td>
+                </tr>
             </tbody>
         </table>
-
     </div>
 </template>
-
 <script>
-import { mapState } from 'vuex';
+import axios from "axios";
 export default {
+    name: "AdminTable",
+    components: {},
+    data() {
+        return {
+            newUser: {
+                firstName: "",
+                lastName: "",
+                email: "",
+                userPass: "",
+
+            },
+            newProduct: {
+                prodName: "",
+                brand: "",
+                price: "",
+                prodUrl: "",
+            },
+        };
+    },
     computed: {
-        ...mapState(['Users']),
-        ...mapState(['Products'])
+        users() {
+            return this.$store.state.Users;
+        },
+        products() {
+            return this.$store.state.Products;
+        },
     },
     mounted() {
         this.$store.dispatch('fetchUsers');
-        this.$store.dispatch('fetchProducts')
+        this.$store.dispatch('fetchProducts');
     },
     methods: {
-        deleteProduct(prodID) {
-
+        async addUser() {
+            try {
+                const response = await axios.post('https://capstone-zyve.onrender.com/', this.newUser);
+                alert(response.data.msg); // Assuming the response has a 'msg' property
+                this.newUser = {
+                    username: "",
+                    email: "",
+                    firstName: "",
+                    lastName: "",
+                };
+                this.fetchUsers();
+            } catch (error) {
+                console.error("Error adding user:", error);
+            }
+        },
+        async editUser(user) {
+            try {
+                // Check if user.userId is defined
+                if (user.userId === undefined) {
+                    console.error("User ID is undefined");
+                    return; // Exit the function to prevent the request
+                }
+                const updatedData = {
+                    username: this.newUser.username,
+                    email: this.newUser.email,
+                    firstName: this.newUser.firstName,
+                    lastName: this.newUser.lastName,
+                };
+                console.log('PATCH Request URL:', `
+       https://capstone-zyve.onrender.com/${user.userId}`);
+                console.log('PATCH Request Payload:', updatedData);
+                // Make the PATCH request only if user.userId is defined
+                await axios.patch(`https://capstone-zyve.onrender.com/update-user/${user.userId}`, updatedData);
+                this.fetchUsers();
+                alert('User updated successfully');
+            } catch (error) {
+                console.error("Error editing user:", error);
+            }
+        },
+        async deleteUser(userID) {
+            const confirmed = confirm("Are you sure you want to delete this user?");
+            if (confirmed) {
+                try {
+                    await this.$store.dispatch("deleteUser", userID);
+                    console.log("User deleted successfully!");
+                } catch (error) {
+                    console.error("Error deleting user:", error);
+                    // Handle the error if needed
+                }
+            }
+            this.$router.push("/admin");
+        },
+        async addProduct() {
+            try {
+                const response = await axios.post('https://capstone-zyve.onrender.com/', this.newProduct);
+                alert(response.data.msg); // Assuming the response has a 'msg' property
+                this.newProduct = {
+                    prodName: "",
+                    quantity: 0,
+                    amount: 0,
+                    Category: "",
+                    prodUrl: "",
+                };
+                // this.fetchProducts()
+            } catch (error) {
+                console.error("Error adding product:", error);
+            }
+        },
+        async editProduct(product) {
+            try {
+                // Check if product.prodID is defined
+                if (product.prodID === undefined) {
+                    console.error("Product ID is undefined");
+                    return; // Exit the function to prevent the request
+                }
+                const updatedData = {
+                    prodName: this.newProduct.prodName,
+                    quantity: this.newProduct.quantity,
+                    amount: this.newProduct.amount,
+                    Category: this.newProduct.Category,
+                    prodUrl: this.newProduct.prodUrl,
+                };
+                console.log('PATCH Request URL:', `https://capstone-zyve.onrender.com/products/updateProduct/${product.prodID}`);
+                console.log('PATCH Request Payload:', updatedData);
+                // Make the PATCH request only if product.prodID is defined
+                await axios.patch(`https://capstone-zyve.onrender.com/products/updateProduct/${product.prodID}`, updatedData);
+                this.fetchProducts();
+                alert('Product updated successfully');
+            } catch (error) {
+                console.error("Error editing product:", error);
+            }
+        },
+        async deleteProduct(prodID) {
+            const confirmed = confirm("Are you sure you want to delete this product?");
+            if (confirmed) {
+                try {
+                    await this.$store.dispatch("deleteProduct", prodID);
+                    console.log("Product deleted successfully!");
+                } catch (error) {
+                    console.error("Error deleting product:", error);
+                    // Handle the error if needed
+                }
+            }
+            this.$router.push("/admin");
+        },
+        resetForm() {
+            // Reset the form after a successful add
+            this.newUser.username = "";
+            this.newUser.email = "";
+            this.newUser.firstName = "";
+            this.newUser.lastName = "";
+        },
+        populateForm(user) {
+            this.newUser.username = user.username;
+            this.newUser.email = user.email;
+            this.newUser.firstName = user.firstName;
+            this.newUser.lastName = user.lastName;
         },
     },
-}
+};
 </script>
 
 <style scoped>
-.delcard-link {
-    color: red;
-    margin: 10px;
-}
-
-.editcard-link {
-    color: green;
-    margin: 10px;
-}
-
-h4 {
-    text-decoration: overline red 6px;
-    text-align: start;
-}
-
-.admin {
+.admin{
     color: white;
-    background-color: black;
+}
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
 }
 
-.container {
-    border: solid red 2px;
+.table th,
+.table td {
     padding: 10px;
-}</style>
+    border: 1px solid #ddd;
+}
+
+/* Style for product images */
+.table img {
+    max-width: 100px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Style for buttons */
+.table button {
+    padding: 6px 12px;
+    background-color: #3490DC;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.table button:hover {
+    background-color: #2779BD;
+}
+</style>

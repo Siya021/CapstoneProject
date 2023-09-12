@@ -3,7 +3,7 @@
     <div class="about"
       style="border-top: solid 5px red; border-top-width: 50px;border-top-right-radius: 20%;border-bottom-left-radius: 20%;">
       <div class="row">
-        <div class="col-8" style="text-align: center;padding:40px;margin:60px; border-right: 2px white solid; background-color: black; color: white
+        <div class="col-8" style="text-align: center;padding:40px;margin:60px; border-right: 6px red solid; background-color: black; color: white
         ">
           <p><big>Welcome to <LogoComp/></big>
           </p>
