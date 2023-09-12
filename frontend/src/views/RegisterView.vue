@@ -11,17 +11,29 @@
             </div>
             <div class="col-8">
                 <LogoComp />
-                <h4 style="text-decoration: overline; margin-top: 50px;">Create <span>New Account</span></h4>
+                <h4 style="text-decoration: overline; margin-bottom: 110px; margin-top: 20px;">Create <span>New
+                        Account</span></h4>
                 <div class="container">
-                    <div class="mb-3">
-                        <label for="exampleFormControlInput1" class="form-label">Email address</label>
-                        <input type="email" class="form-control" id="exampleFormControlInput1"
-                            placeholder="name@example.com">
+                    <div class="imgcontainer">
+                        <img src="img_avatar2.png" alt="Avatar" class="avatar">
+                    </div>
+                    <div class="col">
+                        <input type="text" class="form-control" placeholder="First name" minlength="3" maxlength="20"
+                            required oninvalid="this.setCustomValidity('Please Enter Your Name')"
+                            oninput="this.setCustomValidity('')" aria-label="First name">
+                    </div>
+                    <div class="col">
+                        <input type="text" class="form-control" placeholder="Last name" minlength="3" maxlength="20"
+                            required oninvalid="this.setCustomValidity('Please Enter Your Name')"
+                            oninput="this.setCustomValidity('')" aria-label="Last name">
                     </div>
                     <div class="mb-3">
-                        <label for="exampleFormControlInput1" class="form-label">Email address</label>
                         <input type="email" class="form-control" id="exampleFormControlInput1"
-                            placeholder="name@example.com">
+                            placeholder="name@example.com" aria-label="Email address">
+                    </div>
+                    <div class="mb-3">
+                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Enter password"
+                            aria-label="Enter password">
                     </div>
                 </div>
             </div>
@@ -65,10 +77,13 @@ span {
     background-repeat: no-repeat;
     background-color: black;
     color: white;
-    height: 500px;
+    height: 600px;
 }
 
-input {
+.form-control {
     margin: 10px;
     width: 40%;
-}</style>
+    align-content: center;
+    margin-left: 280px;
+}
+</style>

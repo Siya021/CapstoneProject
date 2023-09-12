@@ -15,12 +15,12 @@
         <h2>Login</h2>
         <hr>
         <form action="" >
-          <div class="container" style="margin-top: 190px; padding:15px">
-          <label for="uname"><b>Username</b></label>
-          <input type="text" placeholder="Enter Username" name="uname" required>
+          <div class="container" style="margin-top: 100px; padding:15px">
+          <label for="uname"><b>Email Adress</b></label>
+          <input class="form-control" type="text" placeholder="Enter Username" name="uname" required>
           <br>
           <label for="psw"><b>Password</b></label>
-          <input type="password" placeholder="Enter Password" name="psw" required>
+          <input class="form-control" type="password" placeholder="Enter Password" name="psw" required>
           <br>
           <button class="btn btn-outline-danger" type="submit">Login</button>
           <br>
@@ -71,8 +71,11 @@ a{
   background-color: black;
   color: white;
   height: 600px;
-}
-input{
+} 
+.form-control {
   margin: 10px;
+  width: 40%;
+  align-content: center;
+  margin-left: 280px;
 }
 </style>
