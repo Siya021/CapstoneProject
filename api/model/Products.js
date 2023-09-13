@@ -48,6 +48,33 @@ class Products {
     });
   }
 
+  fetchBrand(req, res) {
+    const brand = req.params.brand;
+    const query = `
+      SELECT prodID, brand, prodName, price, productUrl
+      FROM Products
+      WHERE brand = ?;`;
+    db.query(query, [brand], (err, result) => {
+      if (err) {
+        console.error(err);
+        res.status(500).json({
+          status: 500,
+          error: "Internal Server Error",
+        });
+      } else if (result.length === 0) {
+        res.status(404).json({
+          status: 404,
+          error: "Product not found",
+        });
+      } else {
+        res.json({
+          status: res.statusCode,
+          result: result,
+        });
+      }
+    });
+  }
+
   addProduct(req, res) {
     const data = req.body;
     const query = `

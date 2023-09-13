@@ -36,7 +36,7 @@ class Users {
     // query with parameterized query
     const query = `
     SELECT firstName, lastName,
-    emailAdd, userPass,
+    email, userPass,
     userUrl
     FROM Users
     WHERE email= ?;
@@ -50,7 +50,7 @@ class Users {
           msg: "You provided a wrong email.",
         });
       } else {
-        await compare(userPass, result[0].userPass, (cErr, cResult) => {
+        compare(userPass, result[0].userPass, (cErr, cResult) => {
           if (cErr) throw cErr;
           // Create a token
           const token = createToken({

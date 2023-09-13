@@ -33,6 +33,9 @@ routes.get("/products", (req, res) => {
 routes.get("/product/:id", (req, res) => {
   products.fetchProduct(req, res)
 });
+routes.get("/products/:brand", (req, res) => {
+  products.fetchBrand(req, res)
+});
 routes.post("/products/add", bodyParser.json(), (req, res) => {
   products.addProduct(req, res);
 });

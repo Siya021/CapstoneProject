@@ -3,12 +3,14 @@ const bcrypt = require("bcrypt");
 require("dotenv").config();
 
 function createToken(user) {
+  console.log(process.env.SECRETE_KEY)
   return sign(
     {
       emailAdd: user.emailAdd,
       userPass: user.userPass,
     },
-    process.env.SECRET_KEY,
+    
+    process.env.SECRETE_KEY,
     {
       expiresIn: "1h",
     }
