@@ -80,10 +80,20 @@ export default createStore({
           newUser
         );
         if (response.status === 201) {
-          context.commit("addUser", newUser);
+          context.commit("addNewUser", newUser);
         }
       } catch (error) {
         console.error("Error adding new user:", error);
+      }
+    },
+    async addProduct(context, newProduct) {
+      try {
+        const response = await axios.post(`${url}addProduct`, newProduct);
+        if (response.status === 201) {
+          context.commit("addProduct", newProduct);
+        }
+      } catch (error) {
+        console.error("Error adding product")
       }
     },
     async fetchProducts(context) {
@@ -117,7 +127,7 @@ export default createStore({
             `Failed to delete product. Status: ${response.status}`
           );
         }
-        context.commit("removeProduct", prodID);
+        context.commit("deleteProduct", prodID);
         context.commit("setDeletionStatus", "success");
       } catch (error) {
         console.error("Error deleting product:", error);
