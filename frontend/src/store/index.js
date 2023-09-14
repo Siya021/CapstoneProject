@@ -75,10 +75,7 @@ export default createStore({
     },
     async addNewUser(context, newUser) {
       try {
-        const response = await axios.post(
-          `${url}register`,
-          newUser
-        );
+        const response = await axios.post(`${url}register`, newUser);
         if (response.status === 201) {
           context.commit("addNewUser", newUser);
         }
@@ -93,7 +90,7 @@ export default createStore({
           context.commit("addProduct", newProduct);
         }
       } catch (error) {
-        console.error("Error adding product")
+        console.error("Error adding product");
       }
     },
     async fetchProducts(context) {
@@ -107,21 +104,27 @@ export default createStore({
     },
     async fetchProduct(context, prodID) {
       try {
-        const { data } = await axios.get(
-          `${url}Products/${prodID}`
-        );
+        const { data } = await axios.get(`${url}Products/${prodID}`);
         context.commit("setProduct", data.result[0]);
         console.log(data.result);
       } catch (e) {
         context.commit("setMsg", "An error occurred.");
       }
     },
+    async fetchBrand(context, brand) {
+      try {
+        const { data } = await axios.get(`${url}Products/${brand}`);
+        context.commit("setProduct", data.result[0]);
+        console.log(data.result);
+      } catch (e) {
+        context.commit("setMsg", "An error occurred.");
+      }
+    },
+
     async deleteProduct(context, prodID) {
       try {
         context.commit("setDeletionStatus", null);
-        const response = await axios.delete(
-          `${url}Products/${prodID}`
-        );
+        const response = await axios.delete(`${url}Products/${prodID}`);
         if (response.status !== 200) {
           throw new Error(
             `Failed to delete product. Status: ${response.status}`
