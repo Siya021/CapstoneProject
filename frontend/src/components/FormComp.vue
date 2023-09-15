@@ -1,7 +1,7 @@
 <template>
     <div class="container-fluid" style="color:white; padding:20px">
         <h2 style=" padding-bottom: 10px;">Contact Page</h2>
-        <form class="contact-box" action="https://formspree.io/f/xrgwzvyn" method="post">
+        <form class="contact-box" action=https://formspree.io/f/mnqkzdzl method="post">
             <div class="row">
                 <div class="col">
                     <input type="text" class="form-control" placeholder="First name" minlength="3" maxlength="20" required

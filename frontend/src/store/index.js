@@ -1,7 +1,7 @@
-import { createStore } from 'vuex'
-import axios from 'axios'
+import { createStore } from "vuex";
+import axios from "axios";
 
-const url= "https://capstone-zyve.onrender.com/"
+const url = "https://capstone-zyve.onrender.com/";
 export default createStore({
   state: {
     Users: null,
@@ -13,9 +13,13 @@ export default createStore({
     msg: null,
     spinner: null,
     token: null,
+    singleProd: null,
   },
   getters: {},
   mutations: {
+    setSingle(state, singleProd) {
+      state.singleProd = singleProd;
+    },
     setUsers(state, Users) {
       state.Users = Users;
     },
@@ -95,7 +99,7 @@ export default createStore({
     },
     async fetchProducts(context) {
       try {
-        const { data } = await axios.get(`${url}Products`);
+        const { data } = await axios.get(`${url}products`);
         context.commit("setProducts", data.results);
         console.log(data.results);
       } catch (e) {
@@ -104,8 +108,8 @@ export default createStore({
     },
     async fetchProduct(context, prodID) {
       try {
-        const { data } = await axios.get(`${url}Products/${prodID}`);
-        context.commit("setProduct", data.result[0]);
+        const { data } = await axios.get(`${url}product/${prodID}`);
+        context.commit("setProduct", data.result);
         console.log(data.result);
       } catch (e) {
         context.commit("setMsg", "An error occurred.");
@@ -153,6 +157,15 @@ export default createStore({
       } catch (error) {
         console.error("Error editing product:", error);
         context.commit("setEditStatus", "error");
+      }
+    },
+    async fetchOrder(context, prodID) {
+      try {
+        const { data } = await axios.get(`${url}order/${prodID}`);
+        context.commit("setProduct", data.result);
+        console.log(data.result);
+      } catch (e) {
+        context.commit("setMsg", "An error occurred.");
       }
     },
   },

@@ -249,6 +249,10 @@ export default {
 </script>
 
 <style scoped>
+.card-img-top{
+    height: 200px;
+    width: 270px;
+}
 #addUser {
     background-color: red;
     color: white;

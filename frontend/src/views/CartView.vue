@@ -21,7 +21,14 @@
 </template>
 <script>
 export default {
-   
+    computed: {
+        orders() {
+            return this.$store.state.Order;
+        },
+    },
+    mounted() {
+        this.$store.dispatch("fetchOrder", this.$route.params.orderID);
+    },
 }
 </script>
 <style scoped>
