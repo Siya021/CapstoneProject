@@ -29,6 +29,9 @@ export default {
     mounted() {
         this.$store.dispatch("fetchOrder", this.$route.params.orderID);
     },
+    methods: {
+        
+    }
 }
 </script>
 <style scoped>
