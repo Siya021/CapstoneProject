@@ -71,8 +71,9 @@ export default {
         return {
             Product: null,
             errorMsg: null,
-            cart: localStorage("cart") ? JSON.parse(localStorage('cart') : [])
-        }
+            // cart: localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')) : [],
+            cart: []
+        };
     },
     mounted() {
         this.$store.dispatch('fetchProducts');
@@ -88,6 +89,8 @@ export default {
         },
         addToCart(product) {
             this.cart.push(product);
+            console.log(this.cart)
+            localStorage.setItem('cart',JSON.stringify(this.cart))
         }
     },
 }

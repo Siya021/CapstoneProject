@@ -1,9 +1,9 @@
 <template>
       <div class="container-fluid">
-        <div class="card">
+        <div class="card" v-if="Product">
             <div class="card-content">
                 <div class="content">
-                    <h4></h4>
+                    <h4>{{product.prodName}}</h4>
                     <br>
                     <p class="mt-4">Sneaker brand</p>
                 </div>
@@ -27,14 +27,10 @@ export default {
             message: ''
         }
     },
-    computed: {
-        cart() {
-            return this.$store.state.cart;
-        },
-    },
     mounted() {
-        if (localStorage.get('cart)')) {
+        if (localStorage.getItem('cart')) {
             this.cart = JSON.parse(localStorage.getItem('cart'));
+            console.log(this.cart)
         } else {
             console.log("There is nothing on cart")
             this.message = "Sorry Please add something on cart"

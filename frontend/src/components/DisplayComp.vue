@@ -1,9 +1,13 @@
 <template>
     <div class="row">
-        <div class="col-4 " style="padding-top: 20px;" >
-            <h1 class="animate__animated animate__backInRight">Your Pathway to <span >Comfort</span> & <span>Style</span></h1>
-        </div> 
-        <div class="col-4">
+        <div class="container-fluid">
+            <div class="col-md-4 " style="padding-top: 20px;">
+                <h1 class="animate__animated animate__backInRight">Your Pathway to <span>Comfort</span> & <span>Style</span>
+                </h1>
+            </div>
+        </div>
+
+        <div class="col-md-4">
             <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active animate__animated animate__lightSpeedInRight">
@@ -211,25 +215,32 @@
                             alt="...">
                     </div>
                     <div class="carousel-item">
-                        <img src="https://i.postimg.cc/yY2PKnvq/78729336-800-800-removebg-preview.png" class="d-block w-100" alt="...">
+                        <img src="https://i.postimg.cc/yY2PKnvq/78729336-800-800-removebg-preview.png" class="d-block w-100"
+                            alt="...">
                     </div>
                     <div class="carousel-item">
-                        <img src="https://i.postimg.cc/yY2PKnvq/78729336-800-800-removebg-preview.png" class="d-block w-100" alt="...">
+                        <img src="https://i.postimg.cc/yY2PKnvq/78729336-800-800-removebg-preview.png" class="d-block w-100"
+                            alt="...">
                     </div>
                     <div class="carousel-item">
-                        <img src="https://i.postimg.cc/XvbkGJRQ/78628035-800-800-removebg-preview.png" class="d-block w-100" alt="...">
+                        <img src="https://i.postimg.cc/XvbkGJRQ/78628035-800-800-removebg-preview.png" class="d-block w-100"
+                            alt="...">
                     </div>
                     <div class="carousel-item">
-                        <img src="https://i.postimg.cc/vBGhjBXc/73631212-800-800-removebg-preview.png" class="d-block w-100" alt="...">
+                        <img src="https://i.postimg.cc/vBGhjBXc/73631212-800-800-removebg-preview.png" class="d-block w-100"
+                            alt="...">
                     </div>
                     <div class="carousel-item">
-                        <img src="https://i.postimg.cc/P58Sv0Pr/72450789-800-800-removebg-preview.png" class="d-block w-100" alt="...">
+                        <img src="https://i.postimg.cc/P58Sv0Pr/72450789-800-800-removebg-preview.png" class="d-block w-100"
+                            alt="...">
                     </div>
                     <div class="carousel-item">
-                        <img src="https://i.postimg.cc/6qmhyhKv/63381126-800-800-removebg-preview.png" class="d-block w-100" alt="...">
+                        <img src="https://i.postimg.cc/6qmhyhKv/63381126-800-800-removebg-preview.png" class="d-block w-100"
+                            alt="...">
                     </div>
                     <div class="carousel-item">
-                        <img src="https://i.postimg.cc/66jcjBZp/70813141-800-800-removebg-preview.png" class="d-block w-100" alt="...">
+                        <img src="https://i.postimg.cc/66jcjBZp/70813141-800-800-removebg-preview.png" class="d-block w-100"
+                            alt="...">
                     </div>
                 </div>
             </div>
