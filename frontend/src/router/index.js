@@ -33,10 +33,11 @@ const routes = [
       import(/* webpackChunkName: "about" */ "../views/AdminView.vue"),
   },
   {
-    path: "/singleview",
-    name: "singleview",
+    path: "/singleview/:prodID",
+    name: "single-view",
     component: () =>
       import(/* webpackChunkName: "about" */ "../views/SingleView.vue"),
+    props: true,
   },
   {
     path: "/login",

@@ -76,6 +76,12 @@ export default {
 .nav-link{
   color: white;
 }
+.nav-link :hover{
+    transform: scale(1.2);
+    text-shadow: 1px 2px 3px 1px rgb(228, 0, 0);
+    color: red;
+    transform-style: preserve-3d;
+}
 .top a{
   color: white;
 }

@@ -4,7 +4,6 @@
             <div class="card-content">
                 <div class="content">
                     <h4>name</h4>
-                    <a class="btn is-rounded is-pulled-left border-danger"><strong>Add to Cart</strong></a>
                     <br>
                     <p class="mt-4">Sneaker brand</p>
                 </div>
@@ -13,7 +12,7 @@
                         <p class="title is-6"></p>
                     </div>
                     <div class="media-right">
-                        <a class="btn "></a>
+                        <a href="/checkout" class="btn form-contol">Checkout</a>
                     </div>
                 </div>
             </div>
@@ -28,5 +27,7 @@ export default {
 <style scoped>
 .container-fluid{
     color: white;
+    background-color: black;
+    border: solid red 4px;
 }
 </style>

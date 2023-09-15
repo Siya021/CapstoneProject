@@ -5,7 +5,7 @@
             <div class="row">
                 <div class="col-4 border-left">
                     <LogoComp />
-            
+
                     <h3 style="margin-top: 60px;padding:20px; border-top: 2px solid red;">Follow Us</h3>
                     <div class="social-container">
                         <a href=""><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor"
@@ -26,12 +26,13 @@
                     </div>
                 </div>
                 <div class="col-4">
-                    
-                    <Address>
-                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
-      <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
-    </svg> 314 Imam Haron Rd, Lansdowne, Cape Town, 7780
-                    </Address>
+
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+                        </svg> 314 Imam Haron Rd, Lansdowne, Cape Town, 7780
+                
                     <form class="d-flex" role="search" style="margin-top: 70px;">
                         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                         <a class="btn btn-outline-danger" type="submit"><svg xmlns="http://www.w3.org/2000/svg" width="16"
@@ -43,7 +44,10 @@
                 </div>
                 <div class="col-4">
                     <div class="container-fluid">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3308.2675931402096!2d18.490123675516227!3d-33.98565982512087!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1dcc433bedd50e81%3A0x9c746d268c8e0ad9!2sLife%20Choices!5e0!3m2!1sen!2sza!4v1694505784637!5m2!1sen!2sza" width="260" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3308.2675931402096!2d18.490123675516227!3d-33.98565982512087!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1dcc433bedd50e81%3A0x9c746d268c8e0ad9!2sLife%20Choices!5e0!3m2!1sen!2sza!4v1694505784637!5m2!1sen!2sza"
+                            width="260" height="250" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
                 <hr>
@@ -101,6 +105,4 @@ footer {
     text-decoration: none;
     color: red;
     margin-left: 16px;
-}
-
-</style>
+}</style>

@@ -34,7 +34,7 @@
                     </div>
                     <div class="mb-3">
                         <input type="email" class="form-control" id="exampleFormControlInput1"
-                            placeholder="name@example.com" aria-label="Email address">
+                            placeholder="name@example.com" aria-label="Email add">
                     </div>
                     <div class="mb-3">
                         <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Enter password"

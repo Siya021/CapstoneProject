@@ -1,13 +1,13 @@
 <template>
     <div>
-        <div class="row">
-            <div class="col-6">
-                <img src="https://i.postimg.cc/2ymGcbZd/72447285-800-800.png" class="single-view">
+        <div class="row" v-if="Product">
+            <div class="col-6" v-for="Product in Product" :key="Product.prodID">
+                <img :src="Product.prodUrl" class="single-view">
             </div>
             <div id="details" class="col-6">
-                <h4>Name</h4>
-                <p>Brand</p>
-                <h2>Price</h2>
+                <h4>{{Product.prodName}}</h4>
+                <p>{{ Product.brand}}</p>
+                <h2>{{ Product.price}}</h2>
                 <!--sizes-->
                 <div class="container-fluid">
                     <p>Sync Your Size</p>
@@ -67,24 +67,17 @@
 </template>
 
 <script>
-import { mapState } from 'vuex';
-
 export default {
+    props: ["prodID"],
+    created() {
+        this.$store.dispatch("fetchProduct", this.prodID);
+    },
     computed: {
-        ...mapState(['products']),
-    },
-    mounted() {
-        this.$store.dispatch('fetchProducts');
-    },
-    methods: {
-        editProduct(prodID) {
-
-        },
-        deleteProduct(prodID) {
-
+        Product() {
+            return this.$store.state.Product;
         },
     },
-};
+}
 </script>
 
 <style scoped>
@@ -101,7 +94,7 @@ export default {
 }
 
 .container-fluid {
-    border: solid blue 2px;
+    border: solid red 2px;
 }
 
 .form-check #details {
@@ -121,7 +114,7 @@ h2 {
 }
 
 .single-view {
-    border-left: blue solid 9px;
+    border-left: red solid 9px;
     border-left-style: ridge;
     width: 100%;
 }
