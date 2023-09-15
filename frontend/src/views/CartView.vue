@@ -3,7 +3,7 @@
         <div class="card">
             <div class="card-content">
                 <div class="content">
-                    <h4>name</h4>
+                    <h4></h4>
                     <br>
                     <p class="mt-4">Sneaker brand</p>
                 </div>
@@ -22,8 +22,8 @@
 <script>
 export default {
     computed: {
-        orders() {
-            return this.$store.state.Order;
+        cart() {
+            return this.$store.state.cart;
         },
     },
     mounted() {
